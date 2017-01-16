@@ -1,8 +1,10 @@
-const server = require('koa')();
+const Koa = require('koa');
 const Router = require('koa-router');
 const bodyParser = require('koa-bodyparser');
 const cors = require('kcors');
 const logger = require('koa-logger');
+
+const server = new Koa();
 
 server.use(bodyParser());
 server.use(cors());
@@ -10,13 +12,13 @@ server.use(logger());
 
 
 const apps = new Router();
-apps.post('/', function* () {
-  this.body = 'hiya';
+apps.post('/', (ctx, next) => {
+  ctx.body = 'hiya';
 });
 
 const proxy = new Router();
-proxy.all('/', function* () {
-  this.body = 'hola';
+proxy.all('/', (ctx, next) => {
+  ctx.body = 'hola';
 });
 
 const api = new Router();

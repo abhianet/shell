@@ -10,23 +10,7 @@ server.use(bodyParser());
 server.use(cors());
 server.use(logger());
 
-
-const apps = new Router();
-apps.post('/', (ctx, next) => {
-  ctx.body = 'hiya';
-});
-
-const proxy = new Router();
-proxy.all('/', (ctx, next) => {
-  ctx.body = 'hola';
-});
-
-const api = new Router();
-api.use('/apps', apps.routes(), apps.allowedMethods());
-api.use('/proxy', proxy.routes(), proxy.allowedMethods());
-
-const router = new Router();
-router.use('/api', api.routes(), api.allowedMethods());
+const router = require('./routes');
 
 server.use(router.routes());
 

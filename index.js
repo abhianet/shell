@@ -14,8 +14,14 @@ apps.post('/', function* () {
   this.body = 'hiya';
 });
 
+const proxy = new Router();
+proxy.all('/', function* () {
+  this.body = 'hola';
+});
+
 const api = new Router();
 api.use('/apps', apps.routes(), apps.allowedMethods());
+api.use('/proxy', proxy.routes(), proxy.allowedMethods());
 
 const router = new Router();
 router.use('/api', api.routes(), api.allowedMethods());

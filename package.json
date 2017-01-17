@@ -16,6 +16,7 @@
   ],
   "author": "Abhishek Kumar",
   "license": "UNLICENSED",
+  "repository": "git@github.com:abhianet/shell.git",
   "dependencies": {
     "kcors": "^2.2.0",
     "koa": "^2.0.0",
@@ -28,6 +29,7 @@
   },
   "devDependencies": {
     "eslint": "^3.13.1",
-    "nodemon": "^1.11.0"
+    "nodemon": "^1.11.0",
+    "webpack": "^2.2.0-rc.7"
   }
 }

@@ -1,8 +1,8 @@
 const Koa = require('koa');
-const Router = require('koa-router');
+const logger = require('koa-logger');
+const mount = require('koa-mount');
 const bodyParser = require('koa-bodyparser');
 const cors = require('kcors');
-const logger = require('koa-logger');
 
 const server = new Koa();
 
@@ -10,9 +10,9 @@ server.use(bodyParser());
 server.use(cors());
 server.use(logger());
 
-const router = require('./routes');
+const api = require('./api');
 
-server.use(router.routes());
+server.use(mount('/api', api));
 
 server.listen(3000);
 

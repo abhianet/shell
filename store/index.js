@@ -1,6 +1,6 @@
 const PouchDB = require('pouchdb');
 
-const ds = new PouchDB('./storage');
+const ds = new PouchDB('./.data');
 
 module.exports = {
   putCube: cube => ds.put(Object.assign({

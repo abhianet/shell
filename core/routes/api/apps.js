@@ -1,7 +1,7 @@
 const Router = require('koa-router');
 
 const apps = new Router();
-apps.post('/', (ctx, next) => {
+apps.post('/', ctx => {
   ctx.body = 'hiya';
 });
 

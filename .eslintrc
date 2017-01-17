@@ -3,8 +3,22 @@
     "browser": true,
     "jest": true,
   },
+  "extends": "airbnb",
+  "parser": "babel-eslint",
+  "rules": {
+    "no-confusing-arrow": 0,
+    "no-shadow": 0,
+    "no-underscore-dangle": 0,
+    "import/no-extraneous-dependencies": 0,
+    "import/prefer-default-export": 0,
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "quote-props": 0
+  },
   "parserOptions": {
     "ecmaVersion": 2017,
-    "sourceType": "module"
+    "sourceType": "module",
+    "ecmaFeatures": {
+        "jsx": true
+    }
   }
 }

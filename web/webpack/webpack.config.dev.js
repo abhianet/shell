@@ -1,7 +1,7 @@
-const { resolve } = require('path')
-const webpack = require('webpack')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const { CheckerPlugin } = require('awesome-typescript-loader')
+const { resolve } = require('path');
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CheckerPlugin } = require('awesome-typescript-loader');
 
 module.exports = {
   entry: [
@@ -18,7 +18,7 @@ module.exports = {
   context: resolve(__dirname, '../src'),
   devtool: 'inline-source-map',
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.jsx', '.json']
+    extensions: ['.ts', '.tsx', '.js', '.jsx', '.json'],
   },
   devServer: {
     hot: true,
@@ -32,7 +32,7 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         use: 'babel-loader',
-      },{
+      }, {
         test: /\.(ts|tsx)$/,
         use: 'awesome-typescript-loader',
       },
@@ -48,4 +48,4 @@ module.exports = {
     new CheckerPlugin(),
   ],
   performance: { hints: false },
-}
+};

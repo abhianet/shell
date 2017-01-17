@@ -1,14 +1,14 @@
-const { resolve } = require('path')
-const webpack = require('webpack')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const OfflinePlugin = require('offline-plugin')
-const { CheckerPlugin } = require('awesome-typescript-loader')
+const { resolve } = require('path');
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const OfflinePlugin = require('offline-plugin');
+const { CheckerPlugin } = require('awesome-typescript-loader');
 
 module.exports = {
   entry: {
     main: resolve(__dirname, '../src'),
     vendor: [
-      'react-router'
+      'react-router',
     ],
   },
   externals: {
@@ -20,12 +20,15 @@ module.exports = {
     path: resolve(__dirname, '../dist'),
     publicPath: '/',
   },
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js', '.jsx', '.json'],
+  },
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
         use: 'babel-loader',
-      },{
+      }, {
         test: /\.(ts|tsx)$/,
         use: 'awesome-typescript-loader',
       },
@@ -54,4 +57,4 @@ module.exports = {
     }),
     new CheckerPlugin(),
   ],
-}
+};

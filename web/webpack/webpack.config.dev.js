@@ -46,7 +46,7 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
     new HtmlWebpackPlugin({
-      title: 'redux-react-starter',
+      title: 'Shell',
       template: resolve(__dirname, 'template.html'),
     }),
   ],

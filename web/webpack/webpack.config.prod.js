@@ -50,7 +50,7 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      title: 'redux-react-starter',
+      title: 'Shell',
       template: resolve(__dirname, 'template.html'),
     }),
     new OfflinePlugin({

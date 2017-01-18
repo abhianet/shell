@@ -28,6 +28,14 @@ module.exports = {
         test: /\.(js|jsx)$/,
         use: 'babel-loader',
       },
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader?importLoaders=1',
+          'postcss-loader',
+        ],
+      },
     ],
   },
   plugins: [
@@ -43,7 +51,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       title: 'redux-react-starter',
-      template: 'webpack/template.html',
+      template: resolve(__dirname, 'template.html'),
     }),
     new OfflinePlugin({
       ServiceWorker: {

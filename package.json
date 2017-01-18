@@ -8,7 +8,7 @@
     "test": "jest",
     "app:dev": "nodemon -- ./index.js",
     "web:dev": "webpack-dev-server --open --config web/webpack/webpack.config.dev.js",
-    "web:prod": "rm -rf dist && webpack --config web/webpack/webpack.config.prod.js  && cp -a web/assets/ web/dist/"
+    "web:prod": "rm -rf web/dist && webpack --config web/webpack/webpack.config.prod.js  && cp -a web/assets/ web/dist/"
   },
   "keywords": [
     "shell",

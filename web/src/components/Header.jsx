@@ -1,8 +1,16 @@
 import React from 'react';
 
+import './style.css';
+
 const Header = () => (
   <div>
-    redux-react-starter
+    <div>redux-react-starter</div>
+
+    <ul>
+      <li><a href="/login">Login</a></li>
+      <li><a href="/signup">Signup</a></li>
+      <li><a href="/">Home</a></li>
+    </ul>
   </div>
 );
 

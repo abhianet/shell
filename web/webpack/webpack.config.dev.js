@@ -32,6 +32,14 @@ module.exports = {
         test: /\.(js|jsx)$/,
         use: 'babel-loader',
       },
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader?importLoaders=1',
+          'postcss-loader',
+        ],
+      },
     ],
   },
   plugins: [

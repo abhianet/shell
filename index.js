@@ -11,7 +11,7 @@ server.use(cors());
 server.use(logger());
 
 server.use(mount('/api', require('./api')));
-server.use(mount('/ui', require('./ui')));
+server.use(mount('/', require('./ui')));
 
 server.listen(3000);
 

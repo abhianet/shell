@@ -6,7 +6,7 @@
   "scripts": {
     "init": "flow-typed init",
     "test": "jest",
-    "app:dev": "nodemon -- ./index.js",
+    "be:dev": "nodemon -- ./index.js",
     "ui:dev": "webpack-dev-server --open --config ui/webpack/webpack.config.dev.js",
     "ui:prod": "rm -rf ui/dist && webpack --config ui/webpack/webpack.config.prod.js  && cp -a ui/assets/ ui/dist/"
   },

@@ -10,4 +10,4 @@ const render = () => {
 
 render();
 
-module.hot.accept('../src/index.tsx', render);
+module.hot.accept('../src/index', render);

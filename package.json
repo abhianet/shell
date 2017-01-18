@@ -4,11 +4,11 @@
   "description": "A shell for multiple views",
   "main": "index.js",
   "scripts": {
+    "init": "flow-typed init",
     "test": "jest",
     "app:dev": "nodemon -- ./index.js",
     "web:dev": "webpack-dev-server --open --config web/webpack/webpack.config.dev.js",
-    "web:prod": "rm -rf dist && webpack --config web/webpack/webpack.config.prod.js  && cp -a web/assets/ web/dist/",
-    "postinstall": "flow-typed install"
+    "web:prod": "rm -rf dist && webpack --config web/webpack/webpack.config.prod.js  && cp -a web/assets/ web/dist/"
   },
   "keywords": [
     "shell",
@@ -34,11 +34,6 @@
     "react-router": "^4.0.0-alpha.6"
   },
   "devDependencies": {
-    "@types/react": "^15.0.0",
-    "@types/react-dom": "^0.14.20",
-    "@types/react-router": "^2.0.44",
-    "awesome-typescript-loader": "^3.0.0-beta.18",
-    "flow-typed": "^2.0.0",
     "babel-core": "^6.20.0",
     "babel-eslint": "^7.0.0",
     "babel-jest": "^18.0.0",
@@ -62,7 +57,6 @@
     "react-hot-loader": "^3.0.0-beta.6",
     "react-test-renderer": "^15.4.1",
     "source-map-loader": "^0.1.6",
-    "typescript": "^2.1.5",
     "webpack": "^2.2.0-rc.7",
     "webpack-dev-server": "^2.2.0-rc.0"
   }

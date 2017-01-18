@@ -1,4 +1,4 @@
-web/dist/
+ui/dist/
 node_modules/
 .vscode/
 .data/

@@ -7,8 +7,8 @@
     "init": "flow-typed init",
     "test": "jest",
     "app:dev": "nodemon -- ./index.js",
-    "web:dev": "webpack-dev-server --open --config web/webpack/webpack.config.dev.js",
-    "web:prod": "rm -rf web/dist && webpack --config web/webpack/webpack.config.prod.js  && cp -a web/assets/ web/dist/"
+    "ui:dev": "webpack-dev-server --open --config ui/webpack/webpack.config.dev.js",
+    "ui:prod": "rm -rf ui/dist && webpack --config ui/webpack/webpack.config.prod.js  && cp -a ui/assets/ ui/dist/"
   },
   "keywords": [
     "shell",

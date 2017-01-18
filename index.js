@@ -10,9 +10,8 @@ server.use(bodyParser());
 server.use(cors());
 server.use(logger());
 
-const api = require('./api');
-
-server.use(mount('/api', api));
+server.use(mount('/api', require('./api')));
+server.use(mount('/ui', require('./ui')));
 
 server.listen(3000);
 
@@ -22,7 +21,7 @@ server.listen(3000);
 // - open main | index .js
 // /api/auth/in
 // /api/auth/out
-// web
+// ui
 // /
 // /home
 // /store
